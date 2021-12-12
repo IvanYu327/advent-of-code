@@ -7,9 +7,6 @@ with open('advent10/info.txt') as f:
     for readline in f:
         arr.append(readline.strip())
 
-openers = ["(","[","{","<"]
-closers = [")","]","}",">"]
-
 print(arr)
 
 illegal = ""
@@ -17,7 +14,7 @@ illegal = ""
 for line in arr:
     reader = ""
     for char in line:
-        if char in openers:
+        if char in ["(","[","{","<"]:
             reader+=char
         else:
             if char == ")" and reader[-1] == "(":
