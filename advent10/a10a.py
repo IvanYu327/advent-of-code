@@ -1,6 +1,3 @@
-from os import read
-
-
 arr = []
 
 with open('advent10/info.txt') as f:
