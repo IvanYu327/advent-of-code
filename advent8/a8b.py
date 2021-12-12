@@ -8,9 +8,6 @@ with open('advent8/info.txt') as f:
 total = 0
 
 for entry in arr:
-    #entry = arr[0]
-    print(entry)
-
     decoder = [ "" for i in range(10) ]
     signal = entry.split("|")[0].split(" ")
     output = entry.split("|")[1].split(" ")
@@ -18,16 +15,11 @@ for entry in arr:
     signal.pop(signal.index(''))
     output.pop(output.index(''))
 
-    print(decoder)
-    print(signal)
-
     for x in signal:
         signal[signal.index(x)] = "".join(sorted(x))
 
     for x in output:
         output[output.index(x)] = "".join(sorted(x))
-
-    print(signal)
 
     for x in signal:
         if(len(x)) == 2:
@@ -39,12 +31,8 @@ for entry in arr:
         elif(len(x)) == 7:
             decoder[8] = x
 
-
     for x in [1,4,7,8]:
         signal.pop(signal.index(decoder[x]))
-        print(signal)
-
-    print()
 
     for x in signal:
         if len(x) == 6:
@@ -56,23 +44,17 @@ for entry in arr:
 
     for x in [0,9]:
         signal.pop(signal.index(decoder[x]))
-        print(signal)
-    print()
+
     for x in signal:
         if len(x) == 6:
             decoder[6] = x
             signal.pop(signal.index(x))
-            print(signal)
 
     #Now only the 5 line digits are left, 2,3,5
     for x in signal:
         if decoder[1][0] in x and decoder[1][1] in x: #only 3 contains all lines that make up 1
             decoder[3] = x
             signal.pop(signal.index(x))
-
-
-    print()
-    print (signal)
 
     for x in signal:
         if x[0] in decoder[6] and x[1] in decoder[6] and x[2] in decoder[6] and x[3] in decoder[6] and x[4] in decoder[6]: 
@@ -82,23 +64,14 @@ for entry in arr:
 
     decoder[2] = signal[0]
 
-
-    print(decoder)
-
-    print(output)
     for digit in output:
-        print(digit)
         for x in decoder:
-            print("|"+x)
             if digit == x:
-                print(decoder.index(x))
                 output[output.index(digit)] = decoder.index(x)
 
     num = 0
     for x in range(4):
         num += int(output[x]) * ( 10 ** (3-x))
-
-    print(num)
 
     total += num
 
