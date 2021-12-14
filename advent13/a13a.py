@@ -4,7 +4,7 @@ import numpy as np
 coords = []
 instructions = []
 
-with open('advent13/test.txt') as f:
+with open('advent13/info.txt') as f:
     for readline in f:
         if readline.strip()!="" and readline.strip()[0] != "f":
             temp = readline.strip().split(",")
@@ -49,5 +49,6 @@ for instruction in instructions:
     print(instruction)
 
     display(grid)
+    break
 
 print(np.sum(np.char.count(grid, sub ='#')))
