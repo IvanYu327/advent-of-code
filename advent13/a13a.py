@@ -1,4 +1,3 @@
-from os import get_inheritable
 import numpy as np
 
 coords = []
