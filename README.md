@@ -4,7 +4,7 @@ my attempts at advent of code 2021 https://adventofcode.com/
 
 Days Completed:
 
-Day Part 1 Part 2
+Day\tPart 1\tPart 2
 
 1 X X
 
