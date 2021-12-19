@@ -1,17 +1,8 @@
-from copy import copy, deepcopy
 tx = [143,177]
 ty = [-106,-71]
 
 # tx = [20,30]
 # ty = [-10,-5]
-
-# def printGrid(grid,h):
-#     print()
-#     for line in range(len(grid)):
-#         print("{:>4d}".format(h-line),end="")
-#         for x in grid[line]:
-#             print(x+" ",end="")
-#         print()
 
 def launch(xv,inpYv):
     yv = inpYv
