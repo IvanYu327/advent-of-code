@@ -51,6 +51,9 @@ def add(a,b):
 #         # print(firstExplodable)
 #         return firstExplodable
 
+#searches the number, if a [ exists with a net 4 ['s on the left, then it has potential to be an explodable pair
+#if from the [ we found earlier, there is a bunch of characters, and then a ] without another [, the the values
+# enclosed in these must be explodable
 def findExplodable(number):
     for x in range(len(number)):
         test = ""
@@ -77,6 +80,9 @@ def findExplodable(number):
                 return test
 
 
+# find the first valid point of explosion as there could be identical pairs earlier that are not unexplodable
+# this point is the search index, from here, we find the the explodable paie, replace it with 0 and complete the
+# addition operations to the right and left as stated in the problem
 def explode(number,explodable):
     # print("exploded:  "+str(explodable).replace(" ","")+"  ",end="")
     print("    exploded:",end="")
@@ -91,17 +97,12 @@ def explode(number,explodable):
             searchIndex = x
             break
     
-    # print(searchIndex)
     ind = number[searchIndex:].index(explodable)+searchIndex
 
-    # print(explodable)
-    # print(ind)
-    # print(explodable == number[4:9])
-    # print(number[4:9])
     number = number[:searchIndex]+number[searchIndex:].replace(str(explodable),"0",1)
-    # print(number)
+    
+    # search right for the first instance of a number
     for x in range(ind+1,len(number)):
-
         if number[x].isnumeric():
             num = number[x]
             i = x
@@ -112,16 +113,11 @@ def explode(number,explodable):
                 else:
                     break
             
-            # print()
-            # print(num)
             number = number[:x] + str(exB+int(num)) + number[i:]
             break
     
+    # search left for the first number
     for x in range(ind-1,-1,-1):
-        # if number[x].isnumeric():
-        #     number = number[:x] + str(exA+int(number[x])) + number[x+1:]
-        #     break
-    
         if number[x].isnumeric():
             num = number[x]
             i = x
@@ -140,6 +136,8 @@ def explode(number,explodable):
 
     return number
 
+# find any two characters that are numeric, therefore must be >10
+# yes i know this doesnt account for >99 but thats not rlly gonna ever happen with this problem
 def findSplit(number):
     for x in range(len(number)-2):
         twoChar = number[x]+number[x+1]
@@ -148,6 +146,7 @@ def findSplit(number):
             return twoChar
     return None
 
+# replace the found splittable number with its split version
 def split(number,toSplit):
     # print("splitted:  "+toSplit+"     ",end="")
     print("    splitted:",end="")
@@ -161,7 +160,10 @@ def split(number,toSplit):
     print(number)
     return number
 
-
+# in a loop, try to explode as many times as possible
+# once cant explode anymore, try to split, if:
+#  - if cant split, reduction is over
+#  - if can split, split, then start over
 def reduce(number):
     # print("Reducing           "+number)
     print("    Reducing: "+number)
@@ -186,6 +188,7 @@ def reduce(number):
     
     return number
 
+# finds innermost pairs using the same method as the find explodable
 def findPair(number):
     for x in range(len(number)):
         test = ""
@@ -207,6 +210,7 @@ def findPair(number):
                 print(test)
                 return test
 
+# completes the magnitude calculations until the snailfish number is reduced to one number
 def magnitude(number):
     while True:
         pair = findPair(number)
@@ -223,13 +227,13 @@ def magnitude(number):
         if number.isnumeric():
             return number
 
-
+# read the numbers, set total to the first one, add the next one to total, reduce, then add again
+# repeat until the end of list of numbers then do magnitude calculation
 if __name__ == "__main__":
     numbers = readFile()
 
     total = numbers[0]
     for x in range(1,len(numbers)):
-        
         print()
         print("  "+total + "\number+ " + numbers[x])
         total = add(total,numbers[x])
