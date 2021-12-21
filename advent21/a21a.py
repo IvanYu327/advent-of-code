@@ -1,7 +1,5 @@
-import numpy as np
-
 if __name__ == "__main__":
-    players = [10,3]
+    pos = [10,3]
     scores = [0,0]
 
     die = 1
@@ -15,7 +13,7 @@ if __name__ == "__main__":
             p = 1
         
         for x in range(3):
-            players[p] += die
+            pos[p] += die
 
             die += 1
             if die == 101:
@@ -23,11 +21,11 @@ if __name__ == "__main__":
         
         rollCount+= 3
         
-        players[p] = players[p]%10
-        if players[p] == 0:
-            players[p] = 10
+        pos[p] = pos[p]%10
+        if pos[p] == 0:
+            pos[p] = 10
 
-        scores[p] += players[p]
+        scores[p] += pos[p]
 
         if max(scores) >= 1000:
             break
