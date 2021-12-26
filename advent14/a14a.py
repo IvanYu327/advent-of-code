@@ -1,3 +1,5 @@
+# brute force method, 14b works for 14a too
+
 from collections import Counter
 
 def readFile():

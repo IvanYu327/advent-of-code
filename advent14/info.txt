@@ -1,5 +1,3 @@
-SHHBNFBCKNHCNOSHHVFF
-
 CK -> N
 VP -> B
 CF -> S
