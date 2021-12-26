@@ -26,24 +26,19 @@ def findPaths(links,currPath):
         allPaths.append(currPath)
     
     else:
-        foundStep = False
         
         for link in links:
 
             if currPath[-1] == link[0]:
-                foundStep = True
+
                 allowed = True
                 
                 if link[1].islower() and link[1] in currPath:
                     allowed = False;
                 
                 if allowed:
-                    print(link[1])
+                    # print(link[1])
                     findPaths(links,currPath+[link[1]])
-
-        print(foundStep) 
-        if foundStep == False:
-            print("failed path")
 
 
 

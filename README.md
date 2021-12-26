@@ -2,7 +2,7 @@
 
 my attempts at advent of code 2021 https://adventofcode.com/
 
-Days Fully Completed: 16 | Stars: 34
+Stars: 38
 
 | Day | Part 1 | Part 2 |
 | --- | :----: | :----: |
@@ -17,7 +17,7 @@ Days Fully Completed: 16 | Stars: 34
 | 9   |   ⭐   |   ⭐   |
 | 10  |   ⭐   |   ⭐   |
 | 11  |   ⭐   |   ⭐   |
-| 12  |   ❌   |   ❌   |
+| 12  |   ⭐   |   ⭐   |
 | 13  |   ⭐   |   ⭐   |
 | 14  |   ⭐   |   ❌   |
 | 15  |   ❌   |   ❌   |
@@ -28,6 +28,6 @@ Days Fully Completed: 16 | Stars: 34
 | 20  |   ⭐   |   ⭐   |
 | 21  |   ⭐   |   ❌   |
 | 22  |   ❌   |   ❌   |
-| 23  |   ❌   |   ❌   |
+| 23  |   ⭐   |   ❌   |
 | 24  |   ❌   |   ❌   |
-| 25  |   ❌   |   ❌   |
+| 25  |   ⭐   |   ❌   |
