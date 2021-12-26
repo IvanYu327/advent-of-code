@@ -74,8 +74,8 @@ if __name__ == "__main__":
     findPaths(links,["start"])
 
     print("done")
-    for path in allPaths:
-        print(path)
+    # for path in allPaths:
+    #     print(path)
         # print(dict(Counter(path)))
     
     print(len(allPaths))
