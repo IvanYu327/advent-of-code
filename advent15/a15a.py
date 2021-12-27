@@ -25,7 +25,7 @@ def printArr(arr):
 def minPathSum(cave):
     m = len(cave);
     n = len(cave[0]);
-    pathChange = [[0 for x in range(m)] for y in range(n)]
+    pathChange = [[0 for x in range(n)] for y in range(m)]
     
     for r in range(1,m):
         pathChange[r][0] = pathChange[r-1][0]+cave[r][0]

@@ -1,8 +1,10 @@
 # advent-of-code-2021
 
-my attempts at advent of code 2021 https://adventofcode.com/
+My attempts at advent of code 2021 https://adventofcode.com/
 
-Stars: 38
+This was my first time doing AOC and it was a lot of fun! I didn't solve every problem but definitely learned a lot about crunching big numbers and using algorithms for problems where brute force would that weeks to run.
+
+Stars: 39 / 50
 
 | Day | Part 1 | Part 2 |
 | --- | :----: | :----: |
@@ -19,7 +21,7 @@ Stars: 38
 | 11  |   ⭐   |   ⭐   |
 | 12  |   ⭐   |   ⭐   |
 | 13  |   ⭐   |   ⭐   |
-| 14  |   ⭐   |   ❌   |
+| 14  |   ⭐   |   ⭐   |
 | 15  |   ❌   |   ❌   |
 | 16  |   ⭐   |   ⭐   |
 | 17  |   ⭐   |   ⭐   |

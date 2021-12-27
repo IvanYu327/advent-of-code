@@ -1,9 +1,6 @@
-import a15a as test
-
 def readFile():
     file = "advent15/test.txt"
     # file = "advent15/info.txt"
-
 
     array = []
     with open(file) as f:
@@ -19,25 +16,38 @@ def printArr(arr):
     for line in arr:
         print(line)
 
-cave = readFile()
-low = test.minPathSum(cave)
+minPathSum = 100
 
-def minPathSum(r,c,length):
-    m = len(cave);
-    n = len(cave[0]);
+def findMinPathSum(cave,r,c,visited,sum = 0):
+    global minPathSum
 
-    if r == m and c == n:
-        return cave[r][c]   
+    rows = len(cave)
+    cols = len(cave[0])
+    print(rows,cols,sum)
+    sum+=cave[r][c]
+    visited+=[r,c]
+
+    if r == rows-1 and c == cols - 1:
+        print(f"found a sum {sum}")
+        if sum < minPathSum:
+            minPathSum = sum
     
-    if r+1<m and length < low:
-        return cave[r][c] + minPathSum(cave,r+1,c,length,low)
-    
-    if r-1>0 and length < low:
-        return cave[r][c] + minPathSum(cave,r+1,c,length,low)
-    
-    if r+1<m and length < low:
-        return cave[r][c] + minPathSum(cave,r+1,c,length,low)
+    else:
+        if r + 1 < rows and [r+1,c] not in visited:
+            findMinPathSum(cave,r+1,c,visited,sum)
+        if c + 1 < cols and [r,c+1] not in visited:
+            findMinPathSum(cave,r,c+1,visited,sum)
+        if r - 1 >= 0 and [r-1,c] not in visited:
+            findMinPathSum(cave,r-1,c,visited,sum)
+        if c - 1 >= 0 and [r-1,c-1] not in visited:
+            findMinPathSum(cave,r,c-1,visited,sum)
 
 
 if __name__ == "__main__":
-    minPathSum(0,0)
+    cave = readFile()
+    
+    print(minPathSum)
+
+    findMinPathSum(cave,0,0,[[0,0]])
+
+    print(minPathSum)

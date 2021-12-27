@@ -1,5 +1,3 @@
-from os import path
-from typing import Counter
 from collections import Counter
 
 def readFile():
