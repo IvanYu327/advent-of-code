@@ -1,4 +1,4 @@
-# advent-of-code-2022
+# Advent of Code 2022!
 
 My attempts at advent of code 2022 https://adventofcode.com/
 
@@ -32,7 +32,7 @@ Stars: 0 / 50
 | 24  |   ❌   |   ❌   |
 | 25  |   ❌   |   ❌   |
 
-# advent-of-code-2021
+# Advent of Code 2021!
 
 My attempts at advent of code 2021 https://adventofcode.com/
 
