@@ -2,7 +2,7 @@ import numpy as np
 
 arr = []
 
-with open('2022/advent01/info.txt', "r") as f:
+with open('2022/advent01/input.txt', "r") as f:
     for readline in f: 
         arr.append(readline.strip())
 
