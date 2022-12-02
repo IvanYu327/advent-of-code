@@ -67,9 +67,7 @@ for match in arr:
         myPlay = elfStrat[elf]-1
         if myPlay == 0:
             myPlay = 3
-
         score += myPlay + 0
-
     elif result == "Y":
     # draw
         score += elfStrat[elf] + 3
