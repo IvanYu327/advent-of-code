@@ -2,7 +2,7 @@
 
 My attempts at advent of code 2022 https://adventofcode.com/
 
-Stars: 18 / 50
+Stars: 20 / 50
 
 | Day | Part 1 | Part 2 |
 | --- | :----: | :----: |
@@ -15,7 +15,7 @@ Stars: 18 / 50
 | 7   |   ⭐   |   ⭐   |
 | 8   |   ⭐   |   ⭐   |
 | 9   |   ⭐   |   ⭐   |
-| 10  |   ❌   |   ❌   |
+| 10  |   ⭐   |   ⭐   |
 | 11  |   ❌   |   ❌   |
 | 12  |   ❌   |   ❌   |
 | 13  |   ❌   |   ❌   |
