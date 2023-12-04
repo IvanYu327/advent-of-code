@@ -38,3 +38,21 @@ print(total)
 
 # PART 2
 
+total = 0
+
+for game in arr:
+    game_cubes = {"red": 0, "green": 0, "blue": 0}
+
+    for hand in game:
+        for cube in hand:
+            count = cube.split(' ')
+            if int(count[0]) > game_cubes[count[1]]:
+                game_cubes[count[1]] = int(count[0])
+    
+    power = 1
+    for x in game_cubes.values():
+        power *= x
+
+    total += power
+    
+print(total)
