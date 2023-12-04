@@ -45,18 +45,18 @@ print(total)
 
 
 
-# PART 1
+# PART 2
 grid = get_input()
 
 
-gear_locations = []
+gear_locations = {}
 
 for row in range(len(grid)):
     for col in range(len(grid[row])):
         char = grid[row][col]
 
         if char == "*":
-            gear_locations.append((row, col))
+            gear_locations[(row, col)] = []
 
 
 total = 0 
@@ -74,15 +74,16 @@ for row in range(len(grid)):
             area_top_left = (row - 1, i - len(num))
             area_bottom_right = (row + 1, i + 1)
             
-            for gear in gear_locations:
+            for gear in gear_locations.keys():
                 if gear[0] >= area_top_left[0] and gear[0] <= area_bottom_right[0] and gear[1] >= area_top_left[1] and gear[1] <= area_bottom_right[1]:
-                    total+= int(num)
-                    my_nums.append(int(num))
+                    gear_locations[gear].append(int(num))
                     break
-                
 
             num = ""
 
+for gear in gear_locations.keys():
+    if len(gear_locations[gear]) == 2:
+        total += gear_locations[gear][0] * gear_locations[gear][1]
 
 print(total)
 
