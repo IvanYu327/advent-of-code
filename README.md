@@ -1,3 +1,24 @@
+# Advent of Code 2025!
+
+My attempts at advent of code 2025 https://adventofcode.com/. 
+
+Stars: 22 / 50
+
+| Day | Part 1 | Part 2 |
+| --- | :----: | :----: |
+| 1   |   ⭐   |   ⭐   |
+| 2   |   ❌   |   ❌   |
+| 3   |   ❌   |   ❌   |
+| 4   |   ❌   |   ❌   |
+| 5   |   ❌   |   ❌   |
+| 6   |   ❌   |   ❌   |
+| 7   |   ❌   |   ❌   |
+| 8   |   ❌   |   ❌   |
+| 9   |   ❌   |   ❌   |
+| 10  |   ❌   |   ❌   |
+| 11  |   ❌   |   ❌   |
+| 12  |   ❌   |   ❌   |
+
 # Advent of Code 2022!
 
 My attempts at advent of code 2022 https://adventofcode.com/. Exam season came pretty early so I didn't get to try as many as I wanted to :(.
